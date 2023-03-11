@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import {incrementCount} from "./counterSlice.js";
 
 function Counter() {
   // read from the Redux store
@@ -9,8 +10,8 @@ function Counter() {
   const dispatch = useDispatch();
 
   function handleOnClick() {
-    // dispatching an action on click
-    dispatch({ type: "count/increment" });
+  //   // dispatching an action on click
+    dispatch(incrementCount());
   }
 
   return (
